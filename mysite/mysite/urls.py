@@ -17,6 +17,6 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^',include('Events.urls')),
+    url(r'^',include('Event.urls')),
     url(r'^admin/', admin.site.urls),
 ]
