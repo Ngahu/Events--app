@@ -11,6 +11,38 @@
     <title>The base page</title>
     <!-- loading th static files -->
     {% load static %}
-      <link rel="stylesheet" href="{% static 'Event/css/bootstrap.css' %}">
-      <link rel="stylesheet" href="{% static 'Invent/css/bootstrap-theme.css' %}">
-      <link rel="stylesheet" href="{% static 'Invent/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'Event/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'Event/css/bootstrap-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'Event/css/base.css' %}">
+</head>
+<body>
+
+<!--========making of the navigation menu========== -->
+
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+
+    <!-- the logo & menu button section -->
+    <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavBar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="#" class="navbar-brand">Events</a>
+    </div>
+
+
+</div>
+</nav>
+
+
+
+
+
+
+<script src="{% static 'Event/js/jquery.js' %}"></script>
+<script src="{% static 'Event/js/bootstrap.js' %}"></script>
+<script src="{% static 'Event/js/base.js' %}"></script>
+</body>
+</html>
