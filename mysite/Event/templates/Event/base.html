@@ -71,7 +71,7 @@
         </li>
 
         <li class="">
-            <a href="#">
+            <a href="{% url 'Event:Event-add' %}">
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;CREATE EVENT
             </a>
         </li>
@@ -85,7 +85,9 @@
 </nav>
 <body>
 
+{% block content %}
 
+{% endblock %}
 
 
 

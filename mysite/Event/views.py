@@ -1,5 +1,6 @@
 from django.views import generic
 from django.views.generic.edit import CreateView,UpdateView,DeleteView
+from django.core.urlresolvers import reverse_lazy
 from .models import Event
 
 
@@ -21,4 +22,17 @@ class DetailView(generic.DetailView):
 class EventCreate(CreateView):
     """creating a new event"""
     model = Event
-    fields = ['Event_title', 'Location', 'time', 'Event_type', 'Event_topic', 'Event_image', 'Event_detail', 'Organizer_name', 'updated', 'timestamp']
+    fields = ['Event_title', 'Location', 'time', 'Event_type', 'Event_topic', 'Event_image', 'Event_detail', 'Organizer_name']
+
+
+
+class EventUpdate(UpdateView):
+    """incharge of updating the Created event"""
+    model = Event
+    fields = ['Event_title', 'Location', 'time', 'Event_type', 'Event_topic', 'Event_image', 'Event_detail','Organizer_name']
+
+
+
+class EventDelete(DeleteView):
+    """incharge of deleting event"""
+    model = Event
