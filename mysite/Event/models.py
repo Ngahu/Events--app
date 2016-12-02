@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 from django.db import models
 
 
-class CreateEvent(models.Model):
+class Event(models.Model):
     """incharge of creating of the events"""
     Event_title = models.CharField(max_length=200)
     Location = models.CharField(max_length=100)

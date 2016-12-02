@@ -1,5 +1,5 @@
 from django.views import generic
-from .models import CreateEvent
+from .models import Event
 
 
 class IndexView(generic.ListView):
@@ -8,10 +8,10 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         """query the db to get a list of all the events"""
-        return CreateEvent.objects.all()
+        return Event.objects.all()
 
 
 class DetailView(generic.DetailView):
     """incharge of the events details"""
-    model = CreateEvent
+    model = Event
     template_name = 'Event/detail.html'

@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{%  block body %}
 
 
-<h1> test test </h1>
-</body>
-</html>
+<ul>
+    {% for event in object_list %}
+    <li><a href="{% url 'Event:detail' event.id %}"> {{ event.Event_title }}  </a> </li>
+
+    {% endfor %}
+
+
+</ul>
+
+{% endblock %}
