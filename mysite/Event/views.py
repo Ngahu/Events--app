@@ -1,11 +1,17 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.views import generic
+from .models import CreateEvent
 
-def index(request):
-    """the function incharge of the home page"""
-    return render(request, 'Event/base.html', {})
 
-def detail(request, Event_detail,):
-    """returning the event detail"""
-    return HttpResponse("<h2> details for event:" + str(Event_detail) + "</h2>")
+class IndexView(generic.ListView):
+    """incharge of returning the home page """
+    template_name = 'Event/index.html'
 
+    def get_queryset(self):
+        """query the db to get a list of all the events"""
+        return CreateEvent.objects.all()
+
+
+class DetailView(generic.DetailView):
+    """incharge of the events details"""
+    model = CreateEvent
+    template_name = 'Event/detail.html'
