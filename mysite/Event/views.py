@@ -1,5 +1,5 @@
 from django.views import generic
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView,UpdateView,DeleteView
 from .models import Event
 
 
@@ -16,3 +16,9 @@ class DetailView(generic.DetailView):
     """incharge of the events details"""
     model = Event
     template_name = 'Event/detail.html'
+
+
+class EventCreate(CreateView):
+    """creating a new event"""
+    model = Event
+    fields = ['Event_title', 'Location', 'time', 'Event_type', 'Event_topic', 'Event_image', 'Event_detail', 'Organizer_name', 'updated', 'timestamp']
