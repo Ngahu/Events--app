@@ -36,3 +36,4 @@ class EventUpdate(UpdateView):
 class EventDelete(DeleteView):
     """incharge of deleting event"""
     model = Event
+    success_url = reverse_lazy('Event:index')
