@@ -19,7 +19,7 @@ class Event(models.Model):
 
     def get_absolute_url(self):
         """returns the detail page"""
-        return reverse('Event:detail', kwargs={'pk':self})
+        return reverse('Event:detail', kwargs={'pk':self.pk})
 
 
     def __unicode__(self):
