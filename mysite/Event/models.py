@@ -10,6 +10,7 @@ class Event(models.Model):
     time = models.CharField(max_length=40)
     Event_type = models.CharField(max_length=300)
     Event_topic = models.CharField(max_length=250)
+    ticket_type = models.CharField(max_length=200, default=False)
     Event_image = models.FileField(null=False, blank=False)
     Event_detail = models.CharField(max_length=1000)
     Organizer_name = models.CharField(max_length=100,null=False)
